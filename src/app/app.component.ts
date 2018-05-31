@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { extend } from 'webdriver-js-extender';
 
 class Point {
   x: number; y: number;
@@ -12,11 +13,12 @@ class Point {
   }
 }
 
-class Point3D {
+class Point3D extends Point {
   x: number;
   y: number;
   z: number;
     constructor (x: number, y: number, z: number ) {
+      super(x, y);
       this.x = x;
       this.y = y;
       this.z = z;
